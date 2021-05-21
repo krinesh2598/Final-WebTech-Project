@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script >
+         $(function(){
+        $('#header').load('header.html');
+        $('#foooter').load('footer.html');
+    });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container-fluid">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="icon"></div>
+            <h5>Can I become a volunteer</h5>
+
+        </div>
+        <div class="panel"> 
+            <p>Yes, Anyone having passion can become a volunteer</p>
+        </div>
+        <div class="accordion">
+            <div class="icon"></div>
+            <h5>What if i want to start a campaign</h5>
+
+        </div>
+        <div class="panel"> 
+            <p>You need to submit a proposal for it.</p>
+        </div>
+        <div class="accordion">
+            <div class="icon"></div>
+            <h5>Can I contribute through money</h5>
+
+        </div>
+        <div class="panel"> 
+            <p>Yes any form of contribution is welcomed from our side</p>
+        </div>
+        <div class="accordion">
+            <div class="icon"></div>
+            <h5>Does Volunteers get stipend</h5>
+
+        </div>
+        <div class="panel"> 
+            <p>Volunteering is something that you are doing on your own, so we doesn't give stipend for it.</p>
+        </div>
+    </div>
+    
+    <script >
+        var acc=document.getElementsByClassName('accordion');
+        var i;
+        var len=acc.length;
+        for(i=0;i<len;i++){
+            acc[i].addEventListener('click',function(){
+                this.classList.toggle('active');
+                var panel=this.nextElementSibling;
+                if(panel.style.maxHeight){
+                    panel.style.maxHeight=null;
+                }else{
+                    panel.style.maxHeight=panel.scrollHeight+'px';
+                }
+            })
+        }
+    </script>
+</body>
+</html>
