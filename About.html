@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script >
+         $(function(){
+        $('#header').load('header.html');
+        $('#foooter').load('footer.html');
+    });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    <!--About Us-->
+    <div class="sect">
+        <div class="cont">
+            <div class="content-sec">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div><div class="content">
+                    <h3>We always strives to work as a team.</h3>
+                    <p>We are the family of GoGreen, a humble yet passionate group of people who want to spread awareness ! Our volunteers have worked day and night to spread awareness, and thus, we have emerged as the most familiar brand name for environmental related issues.</p>
+                    <p>  <span id="more">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem nobis ratione at accusamus animi quae molestiae exercitationem odit natus quam, dolore eius aliquid fugit iusto perspiciatis, repudiandae ab ducimus quidem?</span></p>
+                    <div class="button "  id="read" onclick="read()">
+                        Read More
+                    </div>
+                </div>
+                <div class="soc">
+                    <a href=""> <i class="fab fa-facebook"></i></a>
+                    <a href=""> <i class="fab fa-twitter"></i></a>
+                    <a href=""> <i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="image-section">
+                    <img src="./images/hero-bg.jpg" >
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="foooter">
+
+    </div>
+    <script type="text/javascript">
+    
+        var i=0;
+        function read(){
+            if(!i){
+                document.getElementById("more").style.display="inline";
+                document.getElementById("read").innerHTML="Read Less";
+                i=1;
+            }else{
+                document.getElementById("more").style.display="none";
+                document.getElementById("read").innerHTML="Read More";
+                i=0;
+            }
+        }
+    
+    
+    </script>
+</body>
+</html>
